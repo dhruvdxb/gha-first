@@ -12,3 +12,17 @@ jobs:
 
       - name: Say hello
         run: echo "Hello from GitHub Actions!"
+
+      - name: List files in repo
+        run: ls -la
+
+      - name: Check system version
+        run: |
+          uname -a
+          cat /etc/os-release
+
+      - name: Check Node & Python version
+        run: |
+          node -v || echo "Node not installed"
+          python3 -V || echo "Python not installed"
+
